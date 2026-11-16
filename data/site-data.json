@@ -1,0 +1,15 @@
+{
+  "banners": {
+    "home_top": { "imageUrl": "", "linkUrl": "", "active": false },
+    "home_middle": { "imageUrl": "", "linkUrl": "", "active": false },
+    "home_bottom": { "imageUrl": "", "linkUrl": "", "active": false },
+    "eventos_banner": { "imageUrl": "", "linkUrl": "", "active": false }
+  },
+  "nextEvent": {
+    "date": "",
+    "theme": "",
+    "expectedCouples": "",
+    "imageUrl": "",
+    "active": false
+  }
+}

@@ -72,6 +72,8 @@ export default function EventEditor({
         label="Imagen publicitaria del evento"
         value={value.imageUrl}
         onChange={(url) => onChange({ ...value, imageUrl: url })}
+        targetWidth={1600}
+        targetHeight={900}
       />
     </div>
   );

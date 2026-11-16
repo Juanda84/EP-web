@@ -8,11 +8,15 @@ export default function BannerEditor({
   description,
   value,
   onChange,
+  targetWidth = 1200,
+  targetHeight = 300,
 }: {
   title: string;
   description: string;
   value: Banner;
   onChange: (next: Banner) => void;
+  targetWidth?: number;
+  targetHeight?: number;
 }) {
   return (
     <div className="border border-border rounded-md p-6">
@@ -35,6 +39,8 @@ export default function BannerEditor({
         label="Imagen del banner"
         value={value.imageUrl}
         onChange={(url) => onChange({ ...value, imageUrl: url })}
+        targetWidth={targetWidth}
+        targetHeight={targetHeight}
       />
 
       <div className="mt-4">

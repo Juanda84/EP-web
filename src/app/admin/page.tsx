@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import BannerEditor from "@/components/admin/BannerEditor";
 import EventEditor from "@/components/admin/EventEditor";
+import PopupEditor from "@/components/admin/PopupEditor";
 import type { SiteData } from "@/lib/store";
 
 export default function AdminPage() {
@@ -108,11 +109,19 @@ export default function AdminPage() {
         />
       </section>
 
-      <section className="mb-16">
+      <section className="mb-12">
         <h2 className="font-serif text-2xl mb-6">Próximo evento</h2>
         <EventEditor
           value={data.nextEvent}
           onChange={(next) => setData({ ...data, nextEvent: next })}
+        />
+      </section>
+
+      <section className="mb-16">
+        <h2 className="font-serif text-2xl mb-6">Popup</h2>
+        <PopupEditor
+          value={data.popup}
+          onChange={(next) => setData({ ...data, popup: next })}
         />
       </section>
 

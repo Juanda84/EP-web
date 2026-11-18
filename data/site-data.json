@@ -1,9 +1,9 @@
 {
   "banners": {
-    "home_top": { "imageUrl": "", "linkUrl": "", "active": false },
-    "home_middle": { "imageUrl": "", "linkUrl": "", "active": false },
-    "home_bottom": { "imageUrl": "", "linkUrl": "", "active": false },
-    "eventos_banner": { "imageUrl": "", "linkUrl": "", "active": false }
+    "home_top": { "imageUrl": "", "linkUrl": "", "active": false, "startDate": "", "endDate": "" },
+    "home_middle": { "imageUrl": "", "linkUrl": "", "active": false, "startDate": "", "endDate": "" },
+    "home_bottom": { "imageUrl": "", "linkUrl": "", "active": false, "startDate": "", "endDate": "" },
+    "eventos_banner": { "imageUrl": "", "linkUrl": "", "active": false, "startDate": "", "endDate": "" }
   },
   "nextEvent": {
     "date": "",
@@ -11,5 +11,12 @@
     "expectedCouples": "",
     "imageUrl": "",
     "active": false
+  },
+  "popup": {
+    "text": "",
+    "imageUrl": "",
+    "active": false,
+    "startDate": "",
+    "endDate": ""
   }
 }

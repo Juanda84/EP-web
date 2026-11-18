@@ -1,6 +1,7 @@
 "use client";
 
 import ImageUploadField from "./ImageUploadField";
+import DateRangeFields from "./DateRangeFields";
 import type { Banner } from "@/lib/store";
 
 export default function BannerEditor({
@@ -43,7 +44,7 @@ export default function BannerEditor({
         targetHeight={targetHeight}
       />
 
-      <div className="mt-4">
+      <div className="mt-4 mb-4">
         <label className="block text-xs uppercase tracking-wide text-muted mb-2">
           Enlace al hacer clic (opcional)
         </label>
@@ -54,6 +55,13 @@ export default function BannerEditor({
           placeholder="https://..."
         />
       </div>
+
+      <DateRangeFields
+        startDate={value.startDate}
+        endDate={value.endDate}
+        onChangeStart={(v) => onChange({ ...value, startDate: v })}
+        onChangeEnd={(v) => onChange({ ...value, endDate: v })}
+      />
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { readStore, type BannerSlotKey } from "@/lib/store";
+import { readStore, isWithinDateRange, type BannerSlotKey } from "@/lib/store";
 
 export default function BannerSlot({ slot }: { slot: BannerSlotKey }) {
   const { banners } = readStore();
   const banner = banners[slot];
 
   if (!banner.active || !banner.imageUrl) return null;
+  if (!isWithinDateRange(banner.startDate, banner.endDate)) return null;
 
   const content = (
     <div className="relative mx-auto max-w-4xl h-28 md:h-36 overflow-hidden rounded-md border border-border">

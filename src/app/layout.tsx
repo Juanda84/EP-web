@@ -5,6 +5,9 @@ import AgeGate from "@/components/AgeGate";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsappButton from "@/components/WhatsappButton";
+import SitePopupLoader from "@/components/SitePopupLoader";
+
+export const dynamic = "force-dynamic";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -43,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsappButton />
+        <SitePopupLoader />
       </body>
     </html>
   );

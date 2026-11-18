@@ -21,6 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://erospereira.com"),
   title: "Eros Pereira — Comunidad privada",
   description:
     "Eros Pereira es una comunidad privada de estilo de vida alternativo. Membresía por invitación, discreción absoluta y experiencias de alto nivel.",
@@ -30,7 +31,13 @@ export const metadata: Metadata = {
     title: "Eros Pereira — Comunidad privada",
     description:
       "Comunidad privada de estilo de vida alternativo. Membresía por invitación, discreción absoluta y experiencias de alto nivel.",
-    images: ["/images/og-image.jpg"],
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 

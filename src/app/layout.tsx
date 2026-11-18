@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import AgeGate from "@/components/AgeGate";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsappButton from "@/components/WhatsappButton";
 import SitePopupLoader from "@/components/SitePopupLoader";
+
+const GA_MEASUREMENT_ID = "G-4XFYWNZML9";
 
 export const dynamic = "force-dynamic";
 
@@ -55,6 +58,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <WhatsappButton />
         <SitePopupLoader />
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   );
 }
